@@ -6,31 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <h1>My Portfolio</h1>
         <nav>
-            <a href="about">About</a>
-            <a href="education">Education</a>
-            <a href="services">Services</a>
-            <a href="projects">Projects</a><a href="skills">Skills</a>
-            <a href="certs">Certs</a>
-            <a href="stats">Stats</a>
-            <a href="cv">CV</a>
-            <a href="contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a><a href="skills">Skills</a>
+            <a href="#certs">Certs</a>
+            <a href="#stats">Stats</a>
+            <a href="#cv">CV</a>
+            <a href="#contact">Contact</a>
         </nav>
         <!-- <button><i class="fas fa-moon"></i></button> -->
     </header>
 
-    <section>
+    <section class="hero">
+        <div class="profile-pic">
+            <img src="https://placehold.co/300x300" alt="Photo me">
+        </div>
         <h2>Hello, I´m Dennis Enrique Mugarte Chin</h2>
         <p>Web Developer | Frontend & Backend</p>
-        <a href=""><i class="fas fa-file-download"></i> Download CV</a>
+        <a href="" class="btn"><i class="fas fa-file-download"></i> Download CV</a>
     </section>
 
-    <section>
+    <section id="about">
         <h2>About me</h2>
         <p>I'm a developer specializing in the design and development of web and mobile applications, working on both
             front-end and
@@ -41,22 +45,63 @@
             My goal is to create quality applications that add value and improve the user experience.</p>
     </section>
 
-    <section>
+    <section id="education">
         <h2>Education and experience</h2>
-        <div>
-            <div>
-                <!-- <h3>Técnico Superior Universitario (2021 - 2023)</h3> -->
-                <h3>Técnico Superior Universitario Software Multiplataforma</h3>
-                <p><strong>Universidad Tecnológica del Poniente</strong></p>
-                <p>Maxcanú, Yucatán | 2021 - 2023</p>
+        <div class="timeline">
+            <!-- Educación -->
+            <div class="timeline-item">
+                <span class="icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                <div class="content">
+                    <h3>Técnico Superior Universitario en Software Multiplataforma</h3>
+                    <p><strong>Universidad Tecnológica del Poniente</strong></p>
+                    <p>Maxcanú, Yucatán | 2021 - 2023</p>
+                </div>
             </div>
-            <div>
-                <h3>Ingeniería en Desarrollo de Software Multiplataforma</h3>
-                <p><strong>Universidad Tecnológica del Poniente</strong></p>
-                <p>Maxcanú, Yucatán | 2023 - 2025</p>
-            </div>
-            <div>
 
+            <div class="timeline-item">
+                <span class="icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                <div class="content">
+                    <h3>Ingeniería en Desarrollo de Software Multiplataforma</h3>
+                    <p><strong>Universidad Tecnológica del Poniente</strong></p>
+                    <p>Maxcanú, Yucatán | 2023 - 2025</p>
+                </div>
+            </div>
+
+            <!-- Experiencia -->
+            <div class="timeline-item work">
+                <span class="icon"><i class="fa-solid fa-briefcase"></i></span>
+                <div class="content">
+                    <h3>Desarrollador Backend (Estadía Profesional)</h3>
+                    <p><strong>JOMAT Consultores</strong></p>
+                    <p>Mayo 2023 – Agosto 2023</p>
+                    <p>Durante mi estadía como TSU, participé en el desarrollo de <strong>VYSNELOCAL</strong>,
+                        una aplicación web inspirada en plataformas como Mercado Libre.
+                        El sistema permite la venta de productos, promociones, descuentos y anuncios,
+                        ofreciendo una experiencia integral para los usuarios.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item work">
+                <span class="icon"><i class="fa-solid fa-briefcase"></i></span>
+                <div class="content">
+                    <h3>Proyecto Académico: Digital Event Hub</h3>
+                    <p><strong>Universidad Tecnológica del Poniente</strong></p>
+                    <p>Maxcanú, Yucatán | 2023</p>
+                    <p>Participé en el desarrollo de <strong>Digital Event Hub</strong>,
+                        una aplicación web y móvil para la creación y gestión de eventos.
+                        Incluye tres roles principales:</p>
+                    <ul>
+                        <li><strong>Administrador:</strong> Revisa y aprueba los eventos creados.</li>
+                        <li><strong>Organizador:</strong> Usuarios que crean eventos públicos o privados.</li>
+                        <li><strong>Cliente:</strong> Participa y se registra en los eventos disponibles.</li>
+                    </ul>
+                    <p>
+                        🔗
+                        <a href="https://digital-event-hub-web.vercel.app/landing-page/home.html" target="_blank"
+                            rel="noopener noreferrer">
+                            Ver proyecto</a>
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -113,5 +158,6 @@
         </div>
     </section>
 </body>
+<script src="script.js"></script>
 
 </html>
