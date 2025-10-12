@@ -1,26 +1,28 @@
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #0d0d0d;
-    color: white;
+    background: #0a0a0a;
+    color: #eee;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
+/* ===== HEADER ===== */
 header {
-    background: black;
-    color: white;
-    padding: 20px 50px;
+    background: #111;
+    padding: 20px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,21 +32,25 @@ header {
 }
 
 header h1 {
-    color: red;
-    font-size: 24px;
+    color: #fff;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+header .highlight {
+    color: #00aaff;
 }
 
 nav a {
     margin-left: 20px;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-weight: 500;
 }
 
 nav a:hover {
     color: #00aaff;
 }
 
-/* --- HERO --- */
+/* ===== HERO ===== */
 .hero {
     height: 100vh;
     display: flex;
@@ -52,354 +58,234 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, #000, #001f3f);
-    color: white;
+    background: linear-gradient(135deg, #000, #021b3a);
 }
 
 .hero h2 {
-    font-size: 50px;
-    color: red;
-    animation: fadeInUp 1s ease forwards;
+    font-size: 2.2rem;
+    margin-top: 20px;
 }
 
-.hero p {
-    font-size: 20px;
-    margin: 10px 0 20px;
-    opacity: 0;
-    animation: fadeIn 2s 0.5s forwards;
+.hero .highlight {
+    color: #ff5555;
 }
 
-/* Boton de descarga CV */
+.subtitle {
+    color: #aaa;
+    font-style: italic;
+    margin: 10px 0 25px;
+}
+
 .btn {
-    background: red;
+    background: #00aaff;
     color: white;
     padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
+    border-radius: 30px;
+    font-weight: 600;
 }
 
 .btn:hover {
-    background: #00aaff;
+    background: #ff5555;
 }
 
-/* Diseño de foto de perfil */
-.profile-pic {
-    width: 210px;
-    height: 210px;
+/* ===== PROFILE ===== */
+.profile img {
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    padding: 5px;
-    background: linear-gradient(135deg, #ff0000, #00aaff);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-    margin-bottom: 20px;
-
-    /* Animaciones combinadas */
-    opacity: 0;
-    transform: scale(0.8);
-    animation: zoomIn 1s ease forwards, pulseGlow 2.5s ease-in-out infinite;
-    animation-delay: 0s, 1s;
-}
-
-.profile-pic:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
-}
-
-.profile-pic img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+    border: 4px solid #00aaff;
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.6);
     object-fit: cover;
 }
 
-/* --- Secciones --- */
+/* ===== SECTIONS ===== */
 section {
-    padding: 60px 80px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 1s ease;
-}
-
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
 }
 
 h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 2rem;
     color: #00aaff;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-/* --- Sobre mí --- */
-#about p {
-    max-width: 700px;
-}
-
-/* --- Timeline (Educación y experiencia) --- */
+/* ===== TIMELINE ===== */
 .timeline {
     position: relative;
-    margin: 40px 0;
-    padding-left: 40px;
+    margin-top: 40px;
 }
 
 .timeline::before {
     content: "";
     position: absolute;
-    left: 28px;
+    left: 25px;
     top: 0;
     bottom: 0;
-    width: 4px;
-    background: linear-gradient(180deg, red, #00aaff);
-    animation: glowLine 3s linear infinite alternate;
-    border-radius: 10px;
+    width: 3px;
+    background: linear-gradient(180deg, #ff5555, #00aaff);
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 50px;
+    padding-left: 60px;
+    margin-bottom: 40px;
 }
 
 .timeline-item .icon {
     position: absolute;
-    left: -2px;
+    left: 10px;
     top: 0;
+    width: 35px;
+    height: 35px;
     background: #111;
-    color: #fff;
-    border: 3px solid #00aaff;
-    width: 40px;
-    height: 40px;
+    border: 2px solid #00aaff;
     border-radius: 50%;
+    color: #00aaff;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
-    box-shadow: 0 0 15px rgba(0, 170, 255, 0.7);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.timeline-item .icon:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.9);
 }
 
 .timeline-item .content {
-    background-color: rgba(255, 255, 255, 05);
-    border-left: 4px solid #00aaff;
-    padding: 20px;
-    margin-left: 60px;
-    border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
-
-    max-width: 700px;
-    display: inline-block;
-}
-
-.timeline-item .content:hover {
-    transform: translateY(-5px);
-    background: rgba(0, 170, 255, 0.1);
-    color: #fff;
-}
-
-.timeline-item h3 {
-    margin-bottom: 8px;
-    color: #00aaff;
-    font-size: 20px;
-}
-
-.timeline .content:hover p {
-    color: #fff;
-}
-
-.timeline-item p {
-    margin: 5px 0;
-    color: #000;
-    font-size: 15px;
-}
-
-/* --- Listas dentro de timeline --- */
-.timeline-item ul {
-    margin: 15px 0 0 20px;
-    padding: 0;
-    list-style: none;
-}
-
-.timeline-item ul li {
-    position: relative;
-    margin: 8px 0;
-    padding-left: 25px;
-    font-size: 15px;
-    line-height: 1.5;
-    color: #ddd;
-    transition: color 0.3s, transform 0.3s;
-}
-
-/* Bullet con ícono */
-.timeline-item ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #00aaff;
-    font-weight: bold;
-    text-shadow: 0 0 8px rgba(0, 170, 255, 0.7);
-}
-
-/* Hover en items */
-.timeline-item ul li:hover {
-    color: #fff;
-    transform: translateX(5px);
-}
-
-/* --- Strong --- */
-.timeline-item strong {
-    color: #ff4444;
-    font-weight: bold;
-    text-shadow: 0 0 8px rgba(255, 68, 68, 0.6);
-}
-
-/* --- Links --- */
-.timeline-item a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #00aaff;
-    font-weight: bold;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s, transform 0.3s;
-}
-
-/* Subrayado animado */
-.timeline-item a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0%;
-    height: 2px;
-    background: linear-gradient(90deg, red, #00aaff);
-    transition: width 0.4s ease;
-    border-radius: 2px;
-}
-
-.timeline-item a:hover {
-    color: #ff4444;
-    text-shadow: 0 0 8px rgba(255, 68, 68, 0.6);
-    transform: scale(1.05);
-}
-
-.timeline-item a:hover::after {
-    width: 100%;
-}
-
-/* --- Servicios --- */
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.service {
-    background: #111;
+    background: #151515;
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
+    border-left: 3px solid #00aaff;
     transition: transform 0.3s;
 }
 
-.service:hover {
-    transform: scale(1.05);
+.timeline-item:hover .content {
+    transform: translateY(-5px);
 }
 
-/* --- Proyectos --- */
-.projects {
+/* ===== GRID CARDS ===== */
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
 }
 
-.project {
-    background: #111;
+.card {
+    background: #151515;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #00aaff;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.4);
+}
+
+/* ===== PROJECTS ===== */
+.projects .project {
+    background: #151515;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s;
 }
 
-.project img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-.project:hover {
+.projects .project:hover {
     transform: translateY(-5px);
 }
 
-.project h3 {
-    color: red;
-    padding: 10px;
+.project img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
 }
 
-.project p {
-    padding: 0 10px 10px;
+.project-info {
+    padding: 15px;
 }
 
-
-/* --- Animaciones --- */
-@keyframes zoomIn {
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-
+.project-info h3 {
+    color: #ff5555;
 }
 
-@keyframes pulseGlow {
-    0% {
-        box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 40px rgba(0, 170, 255, 0.6);
-    }
-
-    50% {
-        box-shadow: 0 0 30px rgba(255, 0, 0, 0.9), 0 0 60px rgba(0, 170, 255, 0.9);
-    }
-
-    100% {
-        box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 40px rgba(0, 170, 255, 0.6);
-    }
+.project-info a {
+    color: #00aaff;
+    font-weight: 600;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-
-    }
-
-    to {
-        opacity: 1;
-    }
+/* ===== SKILLS ===== */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.skills span {
+    background: #111;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #00aaff;
+    color: white;
+    font-weight: 600;
 }
 
-@keyframes glowLine {
-    from {
-        box-shadow: 0 0 15px red;
-    }
+/* ===== CONTACT ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
 
-    to {
-        box-shadow: 0 0 20px #00aaff;
-    }
+form input,
+form textarea {
+    background: #111;
+    border: 1px solid #333;
+    padding: 12px;
+    color: white;
+    border-radius: 6px;
+}
+
+form button {
+    background: #00aaff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+form button:hover {
+    background: #ff5555;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #0c0c0c;
+    text-align: center;
+    padding: 30px;
+    color: #aaa;
+}
+
+footer .socials {
+    margin-top: 10px;
+}
+
+footer .socials a {
+    margin: 0 10px;
+    color: #00aaff;
+    font-size: 20px;
+}
+
+footer .socials a:hover {
+    color: #ff5555;
 }
