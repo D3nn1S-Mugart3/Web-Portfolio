@@ -4,14 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Portfolio</title>
+    <title>Web Portfolio - Dennis Enrique Mugarte Chin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <h1>My Portfolio</h1>
+        <h1>D. Mugarte</h1>
         <nav>
             <a href="#about">About</a>
             <a href="#education">Education</a>
@@ -19,20 +24,18 @@
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
             <a href="#certs">Certs</a>
-            <a href="#stats">Stats</a>
             <a href="#cv">CV</a>
             <a href="#contact">Contact</a>
         </nav>
-        <!-- <button><i class="fas fa-moon"></i></button> -->
     </header>
 
     <section class="hero">
         <div class="profile-pic">
-            <img src="https://placehold.co/300x300" alt="Photo me">
+            <img src="https://placehold.co/300x300/1f1f1f/ffffff?text=Tu+Foto" alt="Photo me">
         </div>
-        <h2>Hello, I´m Dennis Enrique Mugarte Chin</h2>
+        <h2>Hello, I'm Dennis Enrique Mugarte Chin</h2>
         <p>Web Developer | Frontend & Backend</p>
-        <a href="" class="btn"><i class="fas fa-file-download"></i> Download CV</a>
+        <a href="cv.pdf" class="btn"><i class="fas fa-file-download"></i> Download CV</a>
     </section>
 
     <section id="about">
@@ -49,28 +52,26 @@
     <section id="education">
         <h2>Education and experience</h2>
         <div class="timeline">
-            <!-- Educación -->
+
             <div class="timeline-item">
-                <span class="icon"><i class="fa-solid fa-graduation-cap"></i></span>
                 <div class="content">
                     <h3>Técnico Superior Universitario en Software Multiplataforma</h3>
                     <p><strong>Universidad Tecnológica del Poniente</strong></p>
                     <p>Maxcanú, Yucatán | 2021 - 2023</p>
                 </div>
+                <span class="icon"><i class="fa-solid fa-graduation-cap"></i></span>
             </div>
 
             <div class="timeline-item">
-                <span class="icon"><i class="fa-solid fa-graduation-cap"></i></span>
                 <div class="content">
                     <h3>Ingeniería en Desarrollo de Software Multiplataforma</h3>
                     <p><strong>Universidad Tecnológica del Poniente</strong></p>
                     <p>Maxcanú, Yucatán | 2023 - 2025</p>
                 </div>
+                <span class="icon"><i class="fa-solid fa-graduation-cap"></i></span>
             </div>
 
-            <!-- Experiencia -->
             <div class="timeline-item work">
-                <span class="icon"><i class="fa-solid fa-briefcase"></i></span>
                 <div class="content">
                     <h3>Desarrollador Backend (Estadía Profesional)</h3>
                     <p><strong>JOMAT Consultores</strong></p>
@@ -80,10 +81,10 @@
                         El sistema permite la venta de productos, promociones, descuentos y anuncios,
                         ofreciendo una experiencia integral para los usuarios.</p>
                 </div>
+                <span class="icon"><i class="fa-solid fa-briefcase"></i></span>
             </div>
 
             <div class="timeline-item work">
-                <span class="icon"><i class="fa-solid fa-briefcase"></i></span>
                 <div class="content">
                     <h3>Proyecto Académico: Digital Event Hub</h3>
                     <p><strong>Universidad Tecnológica del Poniente</strong></p>
@@ -92,17 +93,27 @@
                         una aplicación web y móvil para la creación y gestión de eventos.
                         Incluye tres roles principales:</p>
                     <ul>
-                        <li><strong>Administrador:</strong> Revisa y aprueba los eventos creados.</li>
-                        <li><strong>Organizador:</strong> Usuarios que crean eventos públicos o privados.</li>
-                        <li><strong>Cliente:</strong> Participa y se registra en los eventos disponibles.</li>
+                        <li>
+                            <i class="fas fa-user-shield"></i>
+                            <strong>Administrador:</strong> Revisa y aprueba los eventos creados.
+                        </li>
+                        <li>
+                            <i class="fas fa-calendar-alt"></i>
+                            <strong>Organizador:</strong> Usuarios que crean eventos públicos o privados.
+                        </li>
+                        <li>
+                            <i class="fas fa-user-check"></i>
+                            <strong>Cliente:</strong> Participa y se registra en los eventos disponibles.
+                        </li>
                     </ul>
                     <p>
-                        🔗
-                        <a href="https://digital-event-hub-web.vercel.app/landing-page/home.html" target="_blank"
+                        <a href=" https://digital-event-hub-web.vercel.app/landing-page/home.html" target="_blank"
                             rel="noopener noreferrer">
-                            Ver proyecto</a>
+                            <i class="fas fa-link"></i> Ver proyecto
+                        </a>
                     </p>
                 </div>
+                <span class="icon"><i class="fa-solid fa-briefcase"></i></span>
             </div>
         </div>
     </section>
@@ -133,44 +144,30 @@
         </div>
     </section>
 
-    </section>
-
     <section id="projects">
         <h2>Projects carried out</h2>
         <div class="projects">
             <div class="project">
-                <img src="https://placehold.co/400x200" alt="Projects 1">
-                <h3>Projects 1</h3>
+                <img src="https://placehold.co/400x200/444444/ffffff?text=Proyecto+1" alt="Project 1">
+                <h3>VYSNELOCAL (Backend)</h3>
+                <p>Plataforma de e-commerce con gestión de productos y usuarios.</p>
+                <a href="#">🔗 See project</a>
+            </div>
+            <div class="project">
+                <img src="https://placehold.co/400x200/444444/ffffff?text=Proyecto+2" alt="Project 2">
+                <h3>Digital Event Hub</h3>
+                <p>Gestión de eventos web y móvil.</p>
+                <a href="https://digital-event-hub-web.vercel.app/landing-page/home.html">🔗 See project</a>
+            </div>
+            <div class="project">
+                <img src="https://placehold.co/400x200/444444/ffffff?text=Proyecto+3" alt="Project 3">
+                <h3>Projects 3</h3>
                 <p>Description</p>
                 <a href="#">🔗 See project</a>
             </div>
             <div class="project">
-                <img src="https://placehold.co/400x200" alt="Projects 1">
-                <h3>Projects 1</h3>
-                <p>Description</p>
-                <a href="#">🔗 See project</a>
-            </div>
-            <div class="project">
-                <img src="https://placehold.co/400x200" alt="Projects 1">
-                <h3>Projects 1</h3>
-                <p>Description</p>
-                <a href="#">🔗 See project</a>
-            </div>
-            <div class="project">
-                <img src="https://placehold.co/400x200" alt="Projects 1">
-                <h3>Projects 1</h3>
-                <p>Description</p>
-                <a href="#">🔗 See project</a>
-            </div>
-            <div class="project">
-                <img src="https://placehold.co/400x200" alt="Projects 1">
-                <h3>Projects 1</h3>
-                <p>Description</p>
-                <a href="#">🔗 See project</a>
-            </div>
-            <div class="project">
-                <img src="https://placehold.co/400x200" alt="Projects 1">
-                <h3>Projects 1</h3>
+                <img src="https://placehold.co/400x200/444444/ffffff?text=Proyecto+4" alt="Project 4">
+                <h3>Projects 4</h3>
                 <p>Description</p>
                 <a href="#">🔗 See project</a>
             </div>
@@ -184,8 +181,13 @@
             <span class="skill">CSS</span>
             <span class="skill">JavaScript</span>
             <span class="skill">React</span>
+            <span class="skill">Vue.js</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">Laravel</span>
             <span class="skill">C#</span>
             <span class="skill">Flutter</span>
+            <span class="skill">MySQL</span>
+            <span class="skill">MongoDB</span>
         </div>
     </section>
 
@@ -207,28 +209,29 @@
         </div>
     </section>
 
-    <section>
-        <h2>Curriculum</h2>
-        <p>Puedes descargar mi curriculum completo en PDF</p>
-        <a href="cv.pdf">Descargar CV</a>
+    <section id="cv">
+        <h2>Curriculum Vitae</h2>
+        <p>Puedes descargar mi curriculum completo en formato PDF con más detalles sobre mi experiencia.</p>
+        <a href="cv.pdf" class="btn"><i class="fas fa-file-download"></i> Descargar CV</a>
     </section>
 
-    <section>
+    <section id="contact">
         <h2>Contacto</h2>
         <form>
             <input type="text" placeholder="Tu nombre" required>
             <input type="email" placeholder="Tu correo" required>
             <textarea rows="5" placeholder="Tu mensaje" required></textarea>
-            <button type="submit">Enviar</button>
+            <button type="submit" class="btn">Enviar Mensaje</button>
         </form>
     </section>
-    
+
     <footer>
-        <p>© 2025 Mi portafolio - Creado con ❤️ y código</p>
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
-        <a href="">Threads</a>
-        <a href="">OCC</a>
+        <p>© 2025 Dennis Mugarte - Creado con ❤️ y código</p>
+        <div>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
     </footer>
 </body>
 <script src="script.js"></script>
